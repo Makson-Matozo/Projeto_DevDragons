@@ -1,0 +1,403 @@
+/* ---------------------- Estilização do Corpo ---------------------- */
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../imagens/background.png");
+    background-size: cover;
+    background-position: center;
+    overflow-y: scroll;
+    /* Remover barra de rolagem vertical */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(8px);
+}
+
+/* ---------------------- Container Principal ---------------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centraliza verticalmente */
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 2px;
+    /* Ajuste para mover a logo para baixo */
+}
+
+/* ---------------------- Logo ---------------------- */
+.logo-container {
+    margin-bottom: 30px;
+    /* Espaçamento entre a logo e o conteúdo */
+}
+
+.logo {
+    max-width: 800px;
+    /* Ajuste o tamanho máximo conforme necessário */
+}
+
+
+/* ---------------------- Responsividade ---------------------- */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 300px;
+        /* Reduz o tamanho da logo para dispositivos móveis */
+    }
+}
+
+
+/* ---------------------- Cartões DragonDevs ---------------------- */
+.dragondevs {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.cartao-dragondev {
+    display: none;
+    max-width: 360px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.9) 0px 7px 29px 0px;
+}
+
+.cartao-dragondev.aberto {
+    display: block;
+}
+
+.cartao-dragondev img {
+    margin-top: 10px;
+    width: 100%;
+    /* Ocupe toda a largura do contêiner do cartão */
+    height: 275px;
+    /* Altura fixa para uniformizar todas as imagens */
+    object-fit: cover;
+    /* Preenche o espaço sem distorção */
+    border-radius: 12px;
+    /* Borda arredondada em todas as direções */
+}
+
+/* Detalhes e Informações dos Cartões */
+.cartao-dragondev .cartao-topo {
+    padding: 30px 40px 0;
+}
+
+.cartao-dragondev .nome {
+    margin-bottom: 5px;
+}
+
+
+.cartao-dragondev .tipo {
+    background-color: #ffffff;
+    font-size: 12px;
+    opacity: 0.7;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.cartao-dragondev .detalhes {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-dragondev .cartao-informacoes {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -70px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.cartao-dragondev .cartao-informacoes h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #6b727a;
+}
+
+.cartao-dragondev .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 15px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+/* ---------------------- Tipos de DragonDevs ---------------------- */
+.tipo-eletrico {
+    background-color: #fcc719;
+}
+
+.tipo-fogo {
+    background-color: #341099d2;
+}
+
+.tipo-agua {
+    background-color: #015C98;
+}
+
+.tipo-grama {
+    background-color: #49D0B0;
+}
+
+.tipo-trevas {
+    background-color: #BA68C8;
+}
+
+.tipo-fada {
+    background-color: #337c38;
+}
+
+/* ---------------------- Listagem ---------------------- */
+.listagem {
+    max-width: 200px;
+}
+
+.listagem .dragondev img {
+    width: 25%;
+}
+
+.listagem .dragondev {
+    background-color: #6b727a41;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    min-height: 60px;
+    transition: 0.15 ease-in-out;
+}
+
+
+.listagem .dragondev:hover {
+    transform: scale(1.05);
+}
+
+.listagem .dragondev span {
+    padding-right: 20px;
+}
+
+.listagem .dragondev.ativo {
+    background-color: #e7bb28;
+}
+
+/* ---------------------- Textos e Botões ---------------------- */
+.intro-text {
+    text-align: justify;
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.continue-text {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+    animation: piscar 1.5s infinite;
+}
+
+@keyframes piscar {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #10278f;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #0056b3;
+}
+
+/* ---------------------- Animações ---------------------- */
+
+/* Estilo para criar um fundo transparente */
+.fundo-transparente {
+    position: relative;
+    /* Permite posicionar elementos filhos */
+    z-index: 1;
+    /* Garante que o conteúdo fique acima do fundo */
+}
+
+.fundo-transparente::before {
+    content: "";
+    /* Necessário para criar um pseudo-elemento */
+    position: absolute;
+    /* Permite posicionar o fundo relativo ao contêiner */
+    top: 0;
+    /* Alinha ao topo */
+    left: 0;
+    /* Alinha à esquerda */
+    right: 0;
+    /* Alinha à direita */
+    bottom: 0;
+    /* Alinha à parte inferior */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo preto com 50% de opacidade */
+    z-index: -1;
+    /* Coloca o fundo atrás do texto */
+}
+
+/* Oculta a barra de rolagem, mas ainda permite rolagem */
+::-webkit-scrollbar {
+    display: none;
+    /* Esconde a barra de rolagem no Chrome e Safari */
+}
+
+body {
+    -ms-overflow-style: none;
+    /* Para Internet Explorer e Edge */
+    scrollbar-width: none;
+    /* Para Firefox */
+}
+
+/* Classe para animação de zoom */
+.zoom {
+    animation: zoom-in 0.5s forwards;
+    /* Aplica a animação zoom-in */
+}
+
+/* Definição da animação zoom-in */
+@keyframes zoom-in {
+    from {
+        transform: scale(0);
+        /* Começa do tamanho 0 */
+        opacity: 0;
+        /* Começa invisível */
+    }
+
+    to {
+        transform: scale(1);
+        /* Finaliza no tamanho normal */
+        opacity: 1;
+        /* Torna o elemento visível */
+    }
+}
+
+/* Animação específica para a logo */
+.logo-container img {
+    animation: fadeIn 1s ease-in-out;
+    /* Aplica a animação fadeIn à logo */
+}
+
+/* ---------footer------------- */
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo preto com 50% de transparência */
+    color: white;
+    /* Texto branco */
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 10px 0;
+    /* Espaçamento interno */
+    position: relative;
+    /* Para o posicionamento em relação ao restante do conteúdo */
+    bottom: 0;
+    /* Posiciona o footer na parte inferior */
+    width: 100%;
+    /* Largura total */
+    z-index: 10;
+    /* Para garantir que fique acima de outros elementos, se necessário */
+}
+
+footer a {
+    color: inherit;
+    /* Herdar a cor do elemento pai */
+    text-decoration: none;
+    /* Remover sublinhado */
+}
+
+footer a:hover {
+    text-decoration: underline;
+    /* Opcional: sublinhar quando o mouse estiver sobre o link */
+}
+
+
+/* Container para as listas */
+.container-listas {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Estilo geral das listas */
+.listagem-esquerda,
+.listagem-direita {
+    width: 45%;
+    /* As listas terão 45% da largura do container */
+}
+
+/* Estilo dos itens da lista */
+.listagem-esquerda .dragondev,
+.listagem-direita .dragondev {
+    background-color: #253363;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+}
+
+.listagem-esquerda .dragondev:hover,
+.listagem-direita .dragondev:hover {
+    transform: scale(1.05);
+    /* Efeito de hover */
+}
+
+.listagem-esquerda .dragondev img,
+.listagem-direita .dragondev img {
+    width: 20%;
+    /* Ajusta o tamanho da imagem */
+    margin-right: 10px;
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+    .container-listas {
+        flex-direction: column;
+    }
+
+    .listagem-esquerda,
+    .listagem-direita {
+        width: 100%;
+    }
+}

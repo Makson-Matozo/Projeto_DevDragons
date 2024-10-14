@@ -1,0 +1,101 @@
+@media (max-width: 750px) {
+    .dragondevs {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    .cartao-dragondev img {
+        width: 100%;
+        /* Assegura que a imagem ocupe toda a largura disponível do cartão */
+        height: 200px;
+        /* Define uma altura fixa para todas as imagens */
+        object-fit: cover;
+        /* Corta a imagem para que se ajuste ao espaço sem distorção */
+        border-radius: 8px 8px 0 0;
+        /* Se precisar de bordas arredondadas */
+        border-radius: 12px;
+        /* Borda arredondada em todas as direções */
+        border: 3px solid #f0f0f0;
+        /* Espessura da borda, estilo sólido e cor */
+    }
+
+
+    .cartao-dragondev .cartao-informacoes {
+        padding: 50px 20px 20px;
+        /* Ajuste do padding para melhorar a leitura em telas menores */
+        margin-top: -40px;
+        /* Mantém a estética visual */
+    }
+
+    .cartao-dragondev .cartao-informacoes h3 {
+        font-size: 18px;
+        /* Fonte um pouco maior para melhor legibilidade */
+        margin-bottom: 10px;
+        /* Espaço para separar o título da descrição */
+    }
+
+    .cartao-dragondev .descricao p {
+        font-size: 14px;
+        /* Ajuste da fonte para facilitar leitura em telas menores */
+        line-height: 1.4;
+        /* Melhora o espaçamento entre linhas */
+    }
+
+    .listagem {
+        max-width: 95%;
+        /* Mais espaço para navegação */
+        margin: 0 auto;
+        /* Centraliza o conteúdo */
+    }
+
+    .listagem .dragondev {
+        width: 48%;
+        /* Melhor uso do espaço para dois itens por linha */
+        border-radius: 8px;
+        margin-bottom: 8px;
+        /* Pequeno espaçamento entre itens da lista */
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+        /* Sombra suave */
+        transition: transform 0.2s ease-in-out;
+        /* Animação ao interagir */
+    }
+
+    .listagem .dragondev:hover {
+        transform: scale(1.05);
+        /* Aumenta um pouco o ícone ao passar o mouse */
+    }
+
+    .listagem ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        /* Ajusta o espaço entre os itens da lista */
+    }
+
+    /* Definir o tamanho das imagens e garantir que todas mantenham a mesma proporção */
+    .listagem .dragondev img {
+        width: 100px;
+        /* Define uma largura fixa para as imagens */
+        height: 100px;
+        /* Define uma altura fixa */
+        object-fit: cover;
+        /* Faz com que a imagem preencha o container sem distorção */
+        border-radius: 50%;
+        /* Mantém as imagens circulares (caso necessário) */
+    }
+
+    /* Melhora o layout em telas ainda menores */
+    @media (max-width: 480px) {
+        .cartao-dragondev {
+            max-width: 95%;
+            /* Ocupa quase toda a tela em dispositivos móveis */
+        }
+
+        .listagem .dragondev {
+            width: 100%;
+            /* Ocupa toda a largura em telas muito pequenas */
+        }
+    }
+}

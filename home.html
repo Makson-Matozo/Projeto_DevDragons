@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Introdução</title>
+
+    <link rel="icon" href="./src/imagens/logo/dragon.jpg" type="image/x-icon">
+
+    <!-- ---------------------- Estilos ---------------------- -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+</head>
+
+<body>
+    <main>
+        <!-- ---------------------- Logo ---------------------- -->
+        <div class="logo-container fade-in">
+            <img src="src/imagens/logo/logo.png" alt="" class="logo">
+        </div>
+
+        <!-- ---------------------- Fundo Transparente ---------------------- -->
+        <div class="fundo-transparente">
+            <p class="intro-text fade-in">
+                "Dragon Ball Sparking Zero" é um jogo de luta emocionante que faz parte da famosa franquia Dragon Ball.
+                Com
+                gráficos impressionantes e jogabilidade fluida, permite aos jogadores reviverem batalhas icônicas da
+                série.
+
+                Os personagens principais incluem Goku, sempre em busca de se tornar mais forte, e Vegeta, o príncipe
+                dos
+                Saiyajins, que traz seu orgulho para as lutas. Gohan, filho de Goku, revela seu poder oculto em suas
+                formas
+                de Super Saiyajin. Piccolo, um aliado confiável, usa suas técnicas de regeneração, enquanto Frieza e
+                Cell,
+                vilões icônicos, oferecem desafios formidáveis com suas habilidades devastadoras. Majin Buu, conhecido
+                por
+                suas transformações, é um adversário versátil.
+
+                A jogabilidade é envolvente, com modos de luta variados, como batalhas 1x1 e torneios. O sistema de
+                combate
+                é intuitivo, permitindo combinações de ataques que refletem os estilos de luta dos personagens. Com uma
+                narrativa que conecta eventos da série, "Dragon Ball Sparking Zero" é um tributo emocionante ao universo
+                Dragon Ball, agradando fãs de todas as idades.
+            </p>
+        </div>
+
+        <!-- ---------------------- Mensagem de Continuação ---------------------- -->
+        <p class="continue-text blink-animation">Pressione qualquer tecla para continuar</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DragonDevs. Todos os direitos reservados para <a href="https://www.instagram.com/max__vibes/">@Max__Vibes</a></p>
+    </footer>
+
+    <!-- ---------------------- Scripts ---------------------- -->
+    <script>
+        // Adiciona um listener para o evento 'keydown'
+        document.addEventListener('keydown', () => {
+            window.location.href = "index.html"; // Redireciona para a página index
+        });
+
+        // Adiciona um listener para o evento 'click'
+    document.addEventListener('click', () => {
+        window.location.href = "index.html"; // Redireciona para a página index
+    });
+    </script>
+
+    <!-- ---------------------- Style ---------------------- -->
+
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        /* Definição da animação fadeIn */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                /* Torna o elemento visível */
+                transform: translateY(0);
+                /* Retorna à posição original */
+            }
+        }
+    </style>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
